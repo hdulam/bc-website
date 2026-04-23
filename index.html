@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cano y Asociados — Próximamente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0f1923;
+      --gold:   #c9a84c;
+      --cream:  #f5f0e8;
+      --muted:  #8a7d6b;
+    }
+
+    body {
+      min-height: 100dvh;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── subtle grid texture ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* ── radial glow ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 55% at 50% 45%, rgba(201,168,76,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── thin top bar ── */
+    .bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      animation: barGrow 1.4s ease forwards;
+      transform-origin: left;
+    }
+    @keyframes barGrow { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+
+    /* ── container ── */
+    .wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeUp .9s ease both;
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── logo mark ── */
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px; height: 64px;
+      border: 1px solid rgba(201,168,76,.35);
+      border-radius: 50%;
+      margin-bottom: 2.4rem;
+      animation: fadeUp .9s .15s ease both;
+    }
+    .mark svg { width: 28px; height: 28px; }
+
+    /* ── wordmark ── */
+    .firm {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: .08em;
+      line-height: 1.1;
+      animation: fadeUp .9s .25s ease both;
+    }
+    .firm em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ── divider ── */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.6rem auto;
+      animation: fadeUp .9s .35s ease both;
+    }
+
+    /* ── tagline ── */
+    .tagline {
+      font-size: .78rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      animation: fadeUp .9s .45s ease both;
+    }
+
+    /* ── coming soon ── */
+    .coming {
+      margin-top: 3.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: rgba(245,240,232,.55);
+      letter-spacing: .05em;
+      animation: fadeUp .9s .55s ease both;
+    }
+
+    /* ── domain pill ── */
+    .domain {
+      display: inline-block;
+      margin-top: 2.4rem;
+      padding: .45rem 1.1rem;
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 2rem;
+      font-size: .72rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .75;
+      animation: fadeUp .9s .65s ease both;
+    }
+
+    /* ── corner ornaments ── */
+    .corner {
+      position: fixed;
+      width: 40px; height: 40px;
+      opacity: .25;
+      animation: fadeUp 1.1s .8s ease both;
+    }
+    .corner--tl { top: 18px; left: 18px; border-top: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+    .corner--tr { top: 18px; right: 18px; border-top: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+    .corner--bl { bottom: 18px; left: 18px; border-bottom: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+    .corner--br { bottom: 18px; right: 18px; border-bottom: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+  </style>
+</head>
+<body>
+
+  <div class="bar"></div>
+
+  <div class="corner corner--tl"></div>
+  <div class="corner corner--tr"></div>
+  <div class="corner corner--bl"></div>
+  <div class="corner corner--br"></div>
+
+  <main class="wrap">
+
+    <!-- logo mark -->
+    <div class="mark">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2 L26 8 L26 20 L14 26 L2 20 L2 8 Z" stroke="#c9a84c" stroke-width="1" fill="none"/>
+        <text x="14" y="18" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#c9a84c" font-weight="300">C</text>
+      </svg>
+    </div>
+
+    <h1 class="firm">Cano <em>&amp;</em> Asociados</h1>
+    <div class="divider"></div>
+    <p class="tagline">Consultoría &amp; Asesoría Empresarial</p>
+
+    <p class="coming">Nuestro sitio está en construcción.</p>
+
+    <span class="domain">bc.com.gt</span>
+
+  </main>
+
+</body>
+</html>
