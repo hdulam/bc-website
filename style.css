@@ -1,17 +1,22 @@
-    :root {
-      --navy:    #0d2545;
-      --navy2:   #142f58;
-      --blue:    #1e4080;
-      --blue2:   #2756a8;
-      --sky:     #4a90d9;
-      --sky2:    #6aaee8;
-      --white:   #f7f9fc;
-      --offwhite:#eef2f8;
-      --text:    #1a2a42;
-      --muted:   rgba(13,37,69,0.55);
-      --line:    rgba(13,37,69,0.12);
-      --card-bg: #ffffff;
-    }
+:root {
+  --navy:    #1B233F;   /* azul oscuro real */
+  --navy2:   #1B233F;
+
+  --blue:    #0A72D5;   /* azul principal del check */
+  --blue2:   #3783C2;   /* azul claro del check */
+
+  --sky:     #3783C2;
+  --sky2:    #5A9FD6;   /* opcional más suave */
+
+  --white:   #FFFFFF;
+  --offwhite:#F5F7FA;
+
+  --text:    #1B233F;
+  --muted:   rgba(27,35,63,0.55);
+  --line:    rgba(27,35,63,0.12);
+
+  --card-bg: #ffffff;
+}
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -320,7 +325,7 @@
     /* ── SERVICIOS ── */
     #servicios {
       padding: 7rem 5%;
-     background: #d6e0ee;
+     background: var(--offwhite);
     }
     .servicios-header {
       display: flex; align-items: flex-end; justify-content: space-between;
