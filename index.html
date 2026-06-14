@@ -369,18 +369,18 @@
       <div class="f-2col">
         <div class="f-field">
           <label>Nombre</label>
-          <input type="text" placeholder="Su nombre completo" required/>
+          <input type="text" placeholder="Su nombre completo" name="nombre" required/>
         </div>
 
         <div class="f-field">
           <label>Correo Electrónico</label>
-          <input type="email" placeholder="su@correo.com" required/>
+          <input type="email" placeholder="su@correo.com" name="correo" required/>
         </div>
       </div>
 
       <div class="f-field">
         <label>Área de Consulta</label>
-        <select required>
+        <select required name="area_consulta">
           <option value="" disabled selected>Seleccione un área —</option>
           <option>Créditos Fiscales</option> <option>Impuestos</option> <option>Asesorías</option> <option>Auditorías</option> <option>Servicios Tributarios</option> <option>Servicios Legales, Mercantiles y Jurídicos</option> <option>Marketing Digital</option> <option>Administración de Redes Sociales</option> <option>Diseño Gráfico</option> <option>Pauta Publicitaria</option> <option>Desarrollo de Sitios Web</option> <option>Otro</option>
         </select>
@@ -388,7 +388,7 @@
 
       <div class="f-field">
         <label>Mensaje</label>
-        <textarea placeholder="Describa brevemente su situación o consulta…" required></textarea>
+        <textarea placeholder="Describa brevemente su situación o consulta…" name="mensaje" required></textarea>
       </div>
 
       <button class="btn-send" type="submit">
